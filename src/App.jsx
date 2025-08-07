@@ -14,6 +14,7 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 import './App.css'
 import Airdrop from '../components/Airdrop';
 import AccBalance from '../components/AccBalance';
+import SignMessage from '../components/SignMessage';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
             </div>
             <Airdrop />
             <AccBalance />
+            <SignMessage />
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
