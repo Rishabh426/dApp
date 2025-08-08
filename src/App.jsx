@@ -15,6 +15,7 @@ import './App.css'
 import Airdrop from '../components/Airdrop';
 import AccBalance from '../components/AccBalance';
 import SignMessage from '../components/SignMessage';
+import SendSolana from '../components/SendSolana';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Airdrop />
             <AccBalance />
             <SignMessage />
+            <SendSolana />
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
