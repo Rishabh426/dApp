@@ -4,9 +4,10 @@ import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/
 
 export default function SendSolana() {
     const wallet = useWallet();
-    const {connection} = useConnection();
+    const { connection } = useConnection();
 
     async function sendTokens() {
+        
         let to = document.getElementById("to").value;
         let amount = document.getElementById("amount").value;
         const transaction = new Transaction();
