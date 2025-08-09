@@ -18,27 +18,32 @@ import SignMessage from '../components/SignMessage';
 import SendSolana from '../components/SendSolana';
 
 function App() {
-
   return (
-    <div>
-      <ConnectionProvider endpoint={clusterApiUrl("devnet")}> 
-        <WalletProvider wallets={[]} autoConnect>
-          <WalletModalProvider>
-            <WalletMultiButton />
-            <WalletDisconnectButton />
-            <div>
-              Hi there,
-            </div>
-            <Airdrop />
-            <AccBalance />
-            <SignMessage />
-            <SendSolana />
-          </WalletModalProvider>
-        </WalletProvider>
-      </ConnectionProvider>
+    <div className="flex flex-col min-h-screen">
+      <header className="py-6 text-center">
+        <h1 className="mt-10 text-5xl font-bold text-blue-500">
+          Solana Token <span className="text-black">Faucet</span>
+        </h1>
+      </header>
 
+      <div className="flex flex flex-col justify-around items-center mt-5">
+        <ConnectionProvider endpoint={clusterApiUrl("devnet")}>
+          <WalletProvider wallets={[]} autoConnect>
+            <WalletModalProvider>
+              <div className="flex justify-between mt-15 gap-20 mb-15">
+                <WalletMultiButton />
+                <WalletDisconnectButton />
+              </div>
+              <Airdrop />
+              {/* <AccBalance /> */}
+              <SignMessage />
+              <SendSolana />
+            </WalletModalProvider>
+          </WalletProvider>
+        </ConnectionProvider>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

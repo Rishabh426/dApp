@@ -20,9 +20,12 @@ export default function SendSolana() {
         alert("Sent " + amount + " SOL to " + to);
     }
 
-    return <div>
-        <input id="to" type="text" placeholder="To" />
-        <input id="amount" type="text" placeholder="Amount" />
-        <button onClick={sendTokens}>Send</button>
+    return <div className="w-full max-w-xl bg-gray p-6 rounded-lg shadow-md space-y-6 mt-20">
+        <div className="flex flex-col justify-center items-center">
+            <input id="to" type="text" placeholder="To" />
+            <input id="amount" type="text" placeholder="Amount" />
+            <button onClick={sendTokens}>Send</button>
+        </div>
+        
     </div>
 }
